@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./reset.css">
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-    <title>LetterJam Roulette</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Letter Jam Roulette</title>
+  </head>
+  <body>
     <header>
+      <h1 id="page-title">Letter Jam &#9997;</h1>
     </header>
-        <main>
-        </main>
-    </body>
+    <main>
+        <form class="roulette-form">
+            <label for="lname">Please write the letterer's name:</label><br/>
+            <input type="text" id="lname" name="lname" required minlength="1"><br/>
+        </form>
+        <table>
+          <thead></thead>
+        </table>
+    </main>
     <footer>
-        <p>Made with love in Huixquilucan!</p>
+      <p>Made with &#x2764; in Huixquilucan using 
+          <a href="https://fonts.google.com/specimen/Literata"alt="Link to font" target="blank">Literata</a> by 
+          <a href="https://www.type-together.com" alt="Link to foundry" target="blank">TypeTogether.</a>
+      </p>
     </footer>
-</body>
+  </body>
+  <script async src="script.js"></script>
 </html>
