@@ -1,0 +1,12 @@
+html {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+}
