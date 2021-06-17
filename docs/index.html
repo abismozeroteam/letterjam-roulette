@@ -19,15 +19,18 @@
     </header>
     <main>
         <form class="roulette-form">
-            <label for="lname">Please write the letterer's name:</label><br/>
-            <input type="text" id="lname" name="lname" required minlength="1"><br/>
+            <label for="name">Please write the letterer's name:</label><br/>
+            <input type="text" id="name" name="name" required minlength="1"/><br/>
+            <input type="submit" id="roll" name="roll" value="Roll"/>
         </form>
-        <table>
-          <thead></thead>
-        </table>
+        <section id="letterers">
+            <div class="letterers-element">
+                <h3 class="letterers-element-child">Name</h3><h3 class="letterers-element-child">Word</h3><h3 class="letterers-element-child">Emotion</h3>
+            </div>
+        </section>
     </main>
     <footer>
-      <p>Made with &#x2764; in Huixquilucan using 
+      <p>Made with &#x2764; in Huixquilucan using the typeface
           <a href="https://fonts.google.com/specimen/Literata"alt="Link to font" target="blank">Literata</a> by 
           <a href="https://www.type-together.com" alt="Link to foundry" target="blank">TypeTogether.</a>
       </p>

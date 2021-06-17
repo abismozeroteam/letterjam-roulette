@@ -4,7 +4,6 @@ html {
     box-sizing: border-box;
     color: #333;
     font-size: 20px;
-    caret-color: #333;
 }
 
 *, *:before, *:after {
@@ -31,6 +30,7 @@ label {
 a {
     color: #333;
     font-style: italic;
+    transition: font-weight 0.5s ease-in-out;
 }
 a:hover {
     font-weight: 600;
@@ -38,6 +38,7 @@ a:hover {
 
 body {
     width: 100%;
+    overflow-y: scroll;
 }
 
 header {
@@ -45,12 +46,18 @@ header {
     padding: 0rem 2rem 0rem 2rem;
 }
 
+main {
+    padding: 0rem 2rem 0rem 2rem; 
+}
+
 footer {
-    margin: 2rem 0rem 4rem 0rem;
-    padding: 0rem 2rem 0rem 2rem;
-    position: absolute;
+    padding: 2rem 2rem 4rem 2rem;
     width: 100%;
+    position: fixed;
+    top: auto;
     bottom: 0px;
+    background-color: white;
+    border-top: 4px solid #333;
 }
 
 section {
@@ -58,7 +65,31 @@ section {
 }
 
 input {
+    font-family: 'Literata', serif;
+}
+
+input[type=submit] {
     padding: 1rem;
+    background-color: #333;
+    width: 50%;
+    max-width: 400px;
+    min-width: 100px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: background-color 0.5s ease-in-out;
+}
+
+input[type=submit]:hover {
+    color: #333;
+    background-color:rgb(240, 240, 240);
+}
+
+input[type=text] {
+    padding: 1rem;
+    min-width: 300px;
     width: 100%;
     max-width: 800px;
     margin: 1rem 0rem 1rem 0rem;
@@ -68,33 +99,74 @@ input {
     text-align: center;
     font-family: 'Literata', serif;
     transition: background-color 0.5s ease-in-out;
+    -webkit-touch-callout: auto;
+    -webkit-user-select: auto;
+    -khtml-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
 }
 
-input:focus {
+input[type=text]:focus {
     background-color:rgb(240, 240, 240);
 }
 
-table {
-    width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid 4px #333;
-    padding: 1rem;
+.roulette-form {
+    padding-bottom: 4rem;
 }
 
-.roulette-form {
+#letterers {
+    width: 100%;
+    padding: 2rem 2rem 4rem 2rem;
+    border-top: 4px solid #333;
+    border-bottom: 4px solid #333;
     margin-bottom: 4rem;
 }
 
-@media only screen and (max-width: 700px)  {
+.letterers-element {
+    display: flex;
+    align-items: stretch;
+    justify-content:space-around;
+    border-bottom: 4px solid #333;
+}
+
+.letterers-element-child {
+    padding: 1rem;
+    flex-basis: calc(100%/3);
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 800px)  {
     h1 {
         font-size: 3rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    footer{
+        position: relative;
+    }
+    #letterers {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    .letterers-element-child {
+        font-size: 1rem;
+        padding: .5rem;
+    }
+    input[type=submit] {
+        font-size: 1rem;
     }
 }
 
 @media only screen and (max-width: 400px)  {
     h1 {
         font-size: 2rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    .letterers-element-child {
+        font-size: 0.8rem;
+        padding: .5rem 0rem;
     }
 }
