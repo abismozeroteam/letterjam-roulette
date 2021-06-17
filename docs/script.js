@@ -1,11 +1,10 @@
-const titles = ['Lettering\nJam', 'Calligraphy\nJam', 'Letter Jam'];
 const inputText = document.querySelector('input[type="text"]');
 const letterers = document.getElementById("letterers");
 const letterersElements = document.querySelector('.letterers-element');
-const roll =  document.getElementById('roll')
-
-let words = [ "wear",  "couple",  "feed",  "occupy",  "lie",  "convey",  "locate",  "hold",  "owe",  "cut",  "count",  "double",  "check",  "assign",  "boost",  "appreciate",  "reckon",  "taste",  "employ",  "convict",  "plead",  "widen",  "plant",  "dig",  "prepare",  "decorate",  "descend",  "bind",  "advise",  "behave",  "drown",  "divert",  "create",  "differ",  "condemn",  "creep",  "strike",  "characterise",  "argue",  "describe",  "issue",  "offer",  "bid",  "fine",  "spend",  "start",  "term",  "alter",  "order",  "suffer",];
-let emotions = [ "Sad",  "Happy",  "Naive",  "Serious",  "Scared",  "Angry",  "Hungry",  "Satisfied",  "Excited",  "Focused",  "Confident",  "Lucky",];
+const roll =  document.getElementById('roll');
+const titles = ['Lettering Jam', 'Calligraphy Jam', 'Letter Jam', 'TypeLab Jam'];
+const words = [ "wear",  "couple",  "feed",  "occupy",  "lie",  "convey",  "locate",  "hold",  "owe",  "cut",  "count",  "double",  "check",  "assign",  "boost",  "appreciate",  "reckon",  "taste",  "employ",  "convict",  "plead",  "widen",  "plant",  "dig",  "prepare",  "decorate",  "descend",  "bind",  "advise",  "behave",  "drown",  "divert",  "create",  "differ",  "condemn",  "creep",  "strike",  "characterise",  "argue",  "describe",  "issue",  "offer",  "bid",  "fine",  "spend",  "start",  "term",  "alter",  "order",  "suffer",];
+const emotions = [ "Sad",  "Happy",  "Naive",  "Serious",  "Scared",  "Angry",  "Hungry",  "Satisfied",  "Excited",  "Focused",  "Confident",  "Lucky",];
 
 let counter = 0;
 setInterval(changeTitle, 2000);
