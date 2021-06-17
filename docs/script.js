@@ -1,4 +1,4 @@
-const titles = ['Lettering Jam', 'Calligraphy Jam', 'Letter Jam'];
+const titles = ['Lettering\nJam', 'Calligraphy\nJam', 'Letter Jam'];
 const inputText = document.querySelector('input[type="text"]');
 const letterers = document.getElementById("letterers");
 const letterersElements = document.querySelector('.letterers-element');
@@ -10,7 +10,10 @@ let emotions = [ "Sad",  "Happy",  "Naive",  "Serious",  "Scared",  "Angry",  "H
 let counter = 0;
 setInterval(changeTitle, 2000);
 function changeTitle() {
-    document.getElementById("page-title").textContent = `${titles[counter % (titles.length)]} ${String.fromCodePoint(0x270D)}`;
+    const title = document.getElementById("page-title");
+    const randomTitle = `${titles[counter % (titles.length)]} ${String.fromCodePoint(0x270D)}`;
+    title.textContent = randomTitle;
+    title.ariaLabel = randomTitle;
     counter += 1;
 }
 

@@ -1,8 +1,16 @@
+:root {
+    --bg-color: #5EC757;
+    --black: #333;
+    --semiwhite: rgb(240, 240, 240);
+    --accents: rgb(241, 238, 6);
+}
+
 html {
     font-family: 'Literata', serif;
     text-align: center;
     box-sizing: border-box;
-    color: #333;
+    color: var(--black);
+    background-color: var(--bg-color);
     font-size: 20px;
 }
 
@@ -12,11 +20,12 @@ html {
 
 h1, h2, h3 {
     font-weight: 600;
+    color: var(--semiwhite);
 }
 h1 {
     font-size: 5rem;
     text-transform: uppercase;
-    margin-bottom: 2.5rem;
+    color: var(--accents);
 }
 h3 {
     font-size: 2rem;
@@ -28,7 +37,7 @@ label {
 }
 
 a {
-    color: #333;
+    color: var(--black);
     font-style: italic;
     transition: font-weight 0.5s ease-in-out;
 }
@@ -38,26 +47,37 @@ a:hover {
 
 body {
     width: 100%;
-    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    margin:0;
 }
 
 header {
-    margin: 4rem 0rem 4rem 0rem;
+    margin: 0rem 0rem 4rem 0rem;
+    min-height: 300px;
     padding: 0rem 2rem 0rem 2rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--black);
+    border-bottom: 8px solid var(--semiwhite);
 }
 
 main {
-    padding: 0rem 2rem 0rem 2rem; 
+    padding: 0rem 2rem 0rem 2rem;
+    flex-basis: 100%;
 }
 
 footer {
+    align-self: flex-end;
+    margin-top: auto;
     padding: 2rem 2rem 4rem 2rem;
     width: 100%;
-    position: fixed;
-    top: auto;
-    bottom: 0px;
-    background-color: white;
-    border-top: 4px solid #333;
+    background-color: var(--accents);
+    border-top: 4px solid var(--black);
 }
 
 section {
@@ -70,12 +90,12 @@ input {
 
 input[type=submit] {
     padding: 1rem;
-    background-color: #333;
+    background-color: var(--black);
     width: 50%;
     max-width: 400px;
     min-width: 100px;
     border: none;
-    color: white;
+    color: var(--accents);
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 600;
@@ -83,17 +103,18 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    color: #333;
-    background-color:rgb(240, 240, 240);
+    color: var(--black);
+    background-color: var(--accents);
 }
 
 input[type=text] {
+    background-color: var(--semiwhite);
     padding: 1rem;
     min-width: 300px;
     width: 100%;
     max-width: 800px;
     margin: 1rem 0rem 1rem 0rem;
-    border: solid 4px #333;
+    border: solid 4px var(--black);
     cursor: text;
     font-size: 1.5rem;
     text-align: center;
@@ -108,7 +129,7 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-    background-color:rgb(240, 240, 240);
+    background-color:var(--accents);
 }
 
 .roulette-form {
@@ -118,8 +139,8 @@ input[type=text]:focus {
 #letterers {
     width: 100%;
     padding: 2rem 2rem 4rem 2rem;
-    border-top: 4px solid #333;
-    border-bottom: 4px solid #333;
+    border-top: 4px solid var(--black);
+    border-bottom: 4px solid var(--black);
     margin-bottom: 4rem;
 }
 
@@ -127,7 +148,7 @@ input[type=text]:focus {
     display: flex;
     align-items: stretch;
     justify-content:space-around;
-    border-bottom: 4px solid #333;
+    border-bottom: 4px solid var(--accents);
 }
 
 .letterers-element-child {
@@ -137,14 +158,14 @@ input[type=text]:focus {
 }
 
 @media only screen and (max-width: 800px)  {
+    header {
+        min-height: 250px;
+    }
     h1 {
         font-size: 3rem;
     }
     h3 {
         font-size: 1.5rem;
-    }
-    footer{
-        position: relative;
     }
     #letterers {
         padding: 1rem 1rem 2rem 1rem;
@@ -159,8 +180,11 @@ input[type=text]:focus {
 }
 
 @media only screen and (max-width: 400px)  {
-    h1 {
-        font-size: 2rem;
+    header {
+        min-height: 200px;
+    }
+    h1{
+        font-size: 2.2rem; 
     }
     h3 {
         font-size: 1rem;
